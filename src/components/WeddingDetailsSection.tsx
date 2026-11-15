@@ -297,9 +297,9 @@ export const WeddingDetailsSection: React.FC<WeddingDetailsSectionProps> = ({ da
               viewport={{ once: true }}
               whileHover={{ y: -4 }}
               transition={{ delay: idx * 0.08, duration: 0.45 }}
-              className="relative w-full max-w-[360px] mx-auto aspect-[9/16] rounded-3xl border-2 border-[#B8860B]/75 shadow-[0_20px_50px_rgba(7,38,34,0.2)] overflow-hidden bg-cover bg-center bg-no-repeat"
+              className="relative w-full max-w-[380px] mx-auto aspect-[2/3] rounded-3xl border-2 border-[#B8860B]/75 shadow-[0_20px_50px_rgba(7,38,34,0.2)] overflow-hidden bg-contain bg-center bg-no-repeat"
               style={{
-                backgroundColor: '#EFF6F4',
+                backgroundColor: '#F5EFE2',
                 backgroundImage: item.bgImage ? `url('${item.bgImage}')` : undefined,
               }}
             >

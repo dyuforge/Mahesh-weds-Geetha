@@ -246,7 +246,7 @@ export const defaultWeddingData: WeddingData = {
       mapUrl: 'https://maps.app.goo.gl/kHUbhSExRaRdWEHd8',
       iconType: 'haldi',
       bgImage: './backgrounds/event-haldi.jpg',
-      contentTopClass: 'top-[28%]',
+      contentTopClass: 'top-[24%]',
     },
     {
       date: 'Dec 12, 2026',
@@ -257,7 +257,7 @@ export const defaultWeddingData: WeddingData = {
       mapUrl: 'https://share.google/EyIE2Beb1kxANXDZo',
       iconType: 'muhurtham',
       bgImage: './backgrounds/event-marriage.jpg',
-      contentTopClass: 'top-[42%]',
+      contentTopClass: 'top-[40%]',
     },
     {
       date: 'Dec 14, 2026',
@@ -268,7 +268,7 @@ export const defaultWeddingData: WeddingData = {
       mapUrl: 'https://share.google/O2Z9t337pE3JohHuU',
       iconType: 'reception',
       bgImage: './backgrounds/event-reception.jpg',
-      contentTopClass: 'top-[38%]',
+      contentTopClass: 'top-[40%]',
     },
   ],
   rsvp: {
