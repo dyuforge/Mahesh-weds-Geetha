@@ -78,6 +78,7 @@ export interface SideScheduleItem {
   mapUrl?: string;
   iconType: 'haldi' | 'mehendi' | 'sangeet' | 'muhurtham' | 'reception';
   bgImage?: string;
+  bgPositionClass?: string;
   contentTopClass?: string;
 }
 
@@ -178,8 +179,8 @@ export const defaultWeddingData: WeddingData = {
     hospitalityNote: 'We cordially invite you and your family to grace the wedding ceremony and bless the newlyweds.',
   },
   receptionVenue: {
-    title: 'Vratham & Reception Venue',
-    eventLabel: 'Vratham & Reception • Dec 14th at 11:00 AM',
+    title: 'Reception Venue',
+    eventLabel: 'Reception • Dec 14th at 11:00 AM',
     dateTimeLabel: 'Monday, 14th December 2026 • 11:00 AM',
     name: 'Raja Rani Function Hall',
     hallName: 'Raja Rani Function Hall',
@@ -188,7 +189,7 @@ export const defaultWeddingData: WeddingData = {
     cityStatePin: 'Jangareddygudem, Andhra Pradesh',
     landmark: 'Raja Rani Function Hall, Jangareddygudem',
     googleMapsUrl: 'https://share.google/O2Z9t337pE3JohHuU',
-    hospitalityNote: 'Join us for the sacred Satyanarayana Swamy Vratham followed by the Grand Wedding Reception & Lunch.',
+    hospitalityNote: 'Join us for the Grand Wedding Reception & Lunch at Raja Rani Function Hall, Jangareddygudem.',
   },
   brideSideSchedule: [
     {
@@ -233,7 +234,8 @@ export const defaultWeddingData: WeddingData = {
       mapUrl: 'https://share.google/O2Z9t337pE3JohHuU',
       iconType: 'reception',
       bgImage: './backgrounds/event-reception.jpg',
-      contentTopClass: 'top-[24%]',
+      bgPositionClass: 'bg-bottom',
+      contentTopClass: 'top-[10%]',
     },
   ],
   groomSideSchedule: [
@@ -262,13 +264,25 @@ export const defaultWeddingData: WeddingData = {
     {
       date: 'Dec 14, 2026',
       dayLabel: 'Monday',
-      event: 'Vratham & Reception',
+      event: 'Vratham',
+      time: '11:00 AM',
+      venue: 'At Our Residence',
+      mapUrl: 'https://maps.app.goo.gl/kHUbhSExRaRdWEHd8',
+      iconType: 'muhurtham',
+      bgImage: './backgrounds/event-vratham.jpg',
+      contentTopClass: 'top-[40%]',
+    },
+    {
+      date: 'Dec 14, 2026',
+      dayLabel: 'Monday',
+      event: 'Reception',
       time: '11:00 AM',
       venue: 'Raja Rani Function Hall, Jangareddygudem',
       mapUrl: 'https://share.google/O2Z9t337pE3JohHuU',
       iconType: 'reception',
       bgImage: './backgrounds/event-reception.jpg',
-      contentTopClass: 'top-[40%]',
+      bgPositionClass: 'bg-bottom',
+      contentTopClass: 'top-[10%]',
     },
   ],
   rsvp: {
@@ -346,18 +360,35 @@ export const defaultWeddingData: WeddingData = {
       iconType: 'muhurtham',
     },
     {
+      id: 'vratham',
+      side: 'groom',
+      sideLabel: 'Groom’s Side • Sacred Pooja',
+      name: 'Satyanarayana Swamy Vratham',
+      hindiTitle: 'సత్యనారాయణ స్వామి వ్రతం',
+      date: 'Monday, 14th December 2026',
+      time: '11:00 AM',
+      venueArea: 'At Our Residence',
+      mapUrl: 'https://maps.app.goo.gl/kHUbhSExRaRdWEHd8',
+      dressCode: 'Traditional Pattu Sarees & Silk Pancha / Kurta',
+      description:
+        'Sacred Satyanarayana Swamy Vratham performed with family and elders’ blessings at our residence.',
+      accentColor: '#B45309',
+      badgeColor: 'from-amber-100/90 to-yellow-50/90',
+      iconType: 'muhurtham',
+    },
+    {
       id: 'reception',
       side: 'both',
       sideLabel: 'Both Families • Grand Celebration',
-      name: 'Satyanarayana Swamy Vratham & Reception',
-      hindiTitle: 'సత్యనారాయణ స్వామి వ్రతం & రిసెప్షన్ వేడుక',
+      name: 'Wedding Reception',
+      hindiTitle: 'రిసెప్షన్ వేడుక',
       date: 'Monday, 14th December 2026',
       time: '11:00 AM Onwards',
       venueArea: 'Raja Rani Function Hall, Jangareddygudem',
       mapUrl: 'https://share.google/O2Z9t337pE3JohHuU',
       dressCode: 'Grand Traditional & Royal Festive Attire',
       description:
-        'Sacred Satyanarayana Swamy Vratham in the morning followed by the Grand Wedding Reception and festive feast at Raja Rani Function Hall, Jangareddygudem.',
+        'Grand Wedding Reception and festive feast celebrating the newlyweds at Raja Rani Function Hall, Jangareddygudem.',
       accentColor: '#8F192E',
       badgeColor: 'from-amber-100/90 to-rose-50/90',
       iconType: 'reception',

@@ -288,7 +288,7 @@ export const WeddingDetailsSection: React.FC<WeddingDetailsSectionProps> = ({ da
           <MandalaDivider />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-7xl mx-auto items-center">
           {data.groomSideSchedule.map((item, idx) => (
             <motion.div
               key={item.event}
@@ -297,14 +297,16 @@ export const WeddingDetailsSection: React.FC<WeddingDetailsSectionProps> = ({ da
               viewport={{ once: true }}
               whileHover={{ y: -4 }}
               transition={{ delay: idx * 0.08, duration: 0.45 }}
-              className="relative w-full max-w-[380px] mx-auto aspect-[2/3] rounded-3xl border-2 border-[#B8860B]/75 shadow-[0_20px_50px_rgba(7,38,34,0.2)] overflow-hidden bg-contain bg-center bg-no-repeat"
+              className={`relative w-full max-w-[380px] mx-auto aspect-[2/3] rounded-3xl border-2 border-[#B8860B]/75 shadow-[0_20px_50px_rgba(7,38,34,0.2)] overflow-hidden bg-cover bg-no-repeat ${
+                item.bgPositionClass || 'bg-center'
+              }`}
               style={{
                 backgroundColor: '#F5EFE2',
                 backgroundImage: item.bgImage ? `url('${item.bgImage}')` : undefined,
               }}
             >
               <div
-                className={`absolute left-1/2 -translate-x-1/2 z-10 w-[82%] max-w-[260px] text-center space-y-1.5 bg-gradient-to-b from-[#0F4C46]/95 via-[#0B3B36]/95 to-[#072622]/95 px-4 py-3 rounded-2xl border-2 border-[#D4AF62] shadow-[0_14px_34px_rgba(7,38,34,0.45)] ${
+                className={`absolute left-1/2 -translate-x-1/2 z-10 w-[88%] max-w-[280px] text-center space-y-1.5 bg-gradient-to-b from-[#0F4C46]/95 via-[#0B3B36]/95 to-[#072622]/95 px-3.5 py-2.5 rounded-2xl border-2 border-[#D4AF62] shadow-[0_14px_34px_rgba(7,38,34,0.45)] ${
                   item.contentTopClass || 'top-1/2 -translate-y-1/2'
                 }`}
               >
@@ -323,9 +325,9 @@ export const WeddingDetailsSection: React.FC<WeddingDetailsSectionProps> = ({ da
                 </div>
 
                 <div className="relative pt-1.5 border-t border-[#D4AF62]/40 text-[11px] font-sans text-[#FFF8EA] flex flex-col items-center gap-1.5">
-                  <span className="inline-flex items-start justify-center gap-1.5 font-semibold leading-snug text-center">
-                    <MapPin className="w-3.5 h-3.5 text-[#D4AF62] flex-shrink-0 mt-0.5" />
-                    <span>{item.venue}</span>
+                  <span className="font-semibold leading-snug text-center">
+                    <MapPin className="w-3.5 h-3.5 text-[#D4AF62] inline-block align-text-top mr-1" />
+                    {item.venue}
                   </span>
                   {item.mapUrl && (
                     <a
